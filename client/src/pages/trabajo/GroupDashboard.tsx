@@ -34,12 +34,12 @@ export default function GroupDashboard() {
       const sessionEvals = evaluations.filter((e) => e.sessionId === session.id);
       stats[groupName].evaluationCount += sessionEvals.length;
 
-      sessionEvals.forEach((eval) => {
-        if (eval.phase === "before" && eval.mixedInteractions) {
-          stats[groupName].mixedInteractionsBefore.push(eval.mixedInteractions);
+      sessionEvals.forEach((evaluation) => {
+        if (evaluation.phase === "before" && evaluation.mixedInteractions) {
+          stats[groupName].mixedInteractionsBefore.push(evaluation.mixedInteractions);
         }
-        if (eval.phase === "after" && eval.mixedInteractionsAfter) {
-          stats[groupName].mixedInteractionsAfter.push(eval.mixedInteractionsAfter);
+        if (evaluation.phase === "after" && evaluation.mixedInteractionsAfter) {
+          stats[groupName].mixedInteractionsAfter.push(evaluation.mixedInteractionsAfter);
         }
       });
     });

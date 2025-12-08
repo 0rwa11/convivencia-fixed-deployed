@@ -22,12 +22,12 @@ export default function ComparativeAnalysis() {
 
       const sessionEvals = evaluations.filter((e) => e.sessionId === session.id);
       
-      sessionEvals.forEach((eval) => {
-        if (eval.phase === "before" && eval.mixedInteractions) {
-          data[groupName].before.push(eval.mixedInteractions);
+      sessionEvals.forEach((evaluation) => {
+        if (evaluation.phase === "before" && evaluation.mixedInteractions) {
+          data[groupName].before.push(evaluation.mixedInteractions);
         }
-        if (eval.phase === "after" && eval.mixedInteractionsAfter) {
-          data[groupName].after.push(eval.mixedInteractionsAfter);
+        if (evaluation.phase === "after" && evaluation.mixedInteractionsAfter) {
+          data[groupName].after.push(evaluation.mixedInteractionsAfter);
         }
       });
     });
