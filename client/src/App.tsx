@@ -25,6 +25,7 @@ import GroupDashboard from "./pages/trabajo/GroupDashboard";
 import Calendar from "./pages/herramientas/Calendar";
 import AdvancedSearch from "./pages/herramientas/AdvancedSearch";
 import ExecutiveSummary from "./pages/herramientas/ExecutiveSummary";
+import AnalyticsPage from "./pages/herramientas/AnalyticsPage";
 
 function Router() {
   return (
@@ -46,9 +47,10 @@ function Router() {
       <Route path={"/trabajo/grupos"} component={GroupDashboard} />
       
       {/* Herramientas Routes */}
-      <Route path={"/herramientas/calendario"} component={Calendar} />
-      <Route path={"/herramientas/busqueda"} component={AdvancedSearch} />
-      <Route path={"/herramientas/resumen"} component={ExecutiveSummary} />
+      <Route path={"herramientas/calendario"} component={Calendar} />
+      <Route path={"herramientas/busqueda"} component={AdvancedSearch} />
+      <Route path={"herramientas/resumen"} component={ExecutiveSummary} />
+      <Route path={"herramientas/analisis"} component={AnalyticsPage} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

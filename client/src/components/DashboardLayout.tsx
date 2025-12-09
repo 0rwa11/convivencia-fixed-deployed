@@ -130,6 +130,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     <a className="cursor-pointer">Resumen Ejecutivo</a>
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/herramientas/analisis">
+                    <a className="cursor-pointer">Análisis Avanzados</a>
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -293,6 +298,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Resumen Ejecutivo
+                </a>
+              </Link>
+              <Link href="/herramientas/analisis">
+                <a
+                  className="block px-3 py-2 text-sm rounded-md hover:bg-accent transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Análisis Avanzados
                 </a>
               </Link>
             </div>
