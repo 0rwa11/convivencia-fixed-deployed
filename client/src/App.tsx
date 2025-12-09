@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import DashboardLayout from "./components/DashboardLayout";
+import Analysis from "./pages/Analysis";
 
 // Programa Pages
 import ProgramOverview from "./pages/programa/ProgramOverview";
@@ -31,6 +32,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/analisis"} component={Analysis} />
       
       {/* Programa Routes */}
       <Route path={"/programa/inicio"} component={ProgramOverview} />
@@ -47,10 +49,10 @@ function Router() {
       <Route path={"/trabajo/grupos"} component={GroupDashboard} />
       
       {/* Herramientas Routes */}
-      <Route path={"herramientas/calendario"} component={Calendar} />
-      <Route path={"herramientas/busqueda"} component={AdvancedSearch} />
-      <Route path={"herramientas/resumen"} component={ExecutiveSummary} />
-      <Route path={"herramientas/analisis"} component={AnalyticsPage} />
+      <Route path={"/herramientas/calendario"} component={Calendar} />
+      <Route path={"/herramientas/busqueda"} component={AdvancedSearch} />
+      <Route path={"/herramientas/resumen"} component={ExecutiveSummary} />
+      <Route path={"/herramientas/analisis"} component={AnalyticsPage} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
